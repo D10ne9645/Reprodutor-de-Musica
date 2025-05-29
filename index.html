@@ -1,0 +1,35 @@
+<div class="player">
+  <h1>Reprodutor de Música</h1>
+
+  <div class="info">
+    <div id="title">Nenhuma música selecionada</div>
+  </div>
+
+  <audio id="audio" src=""></audio>
+
+  <input type="file" id="file-input" accept=".mp3, .wav" multiple />
+
+  <div class="controles">
+    <button id="prev" disabled aria-label="Música anterior" title="Música anterior">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M11 19l-7-7 7-7v14zm2-14v14l7-7-7-7z"/></svg>
+    </button>
+
+    <button id="play" disabled aria-label="Reproduzir/Pausar" title="Reproduzir/Pausar">
+      <svg id="icon-play" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="icon-pause" style="display:none" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h-4V5h4z"/></svg>
+    </button>
+
+    <button id="next" disabled aria-label="Próxima música" title="Próxima música">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M13 5v14l7-7-7-7zm-2 0L4 12l7 7V5z"/></svg>
+    </button>
+  </div>
+
+  <input type="range" id="progress" value="0" min="0" max="100" step="1" disabled />
+
+  <div class="tempo">
+    <span id="current-time">00:00</span>
+    <span id="duration">00:00</span>
+  </div>
+
+  <ul id="playlist"></ul>
+</div>
